@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{39F7F481-0D66-4F59-8698-2E6C4E59812A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CA20AF9F-A628-46F9-AD32-F2B3017BAAB9}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		NuGet.Config = NuGet.Config
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MusicBank", "src\MusicBank\MusicBank.xproj", "{E72BA595-0160-4D8D-8899-43B0C6CE8DBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E72BA595-0160-4D8D-8899-43B0C6CE8DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E72BA595-0160-4D8D-8899-43B0C6CE8DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E72BA595-0160-4D8D-8899-43B0C6CE8DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E72BA595-0160-4D8D-8899-43B0C6CE8DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E72BA595-0160-4D8D-8899-43B0C6CE8DBB} = {39F7F481-0D66-4F59-8698-2E6C4E59812A}
+	EndGlobalSection
+EndGlobal

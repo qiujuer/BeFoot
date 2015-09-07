@@ -1,0 +1,7 @@
+{
+  "Data": {
+    "MusicConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=MusicBank-Database;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
