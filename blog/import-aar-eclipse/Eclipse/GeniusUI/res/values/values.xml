@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/qiujuer/Tools/Spaces/GitHub/Genius-Android/caprice/library-ui/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <array name="g_default_loading_fg">
+        <item>@color/cyan_500</item>
+        <item>@color/purple_500</item>
+        <item>@color/blue_500</item>
+        <item>@color/orange_500</item>
+        <item>@color/pink_500</item>
+    </array>
+    <!-- From: file:/Users/qiujuer/Tools/Spaces/GitHub/Genius-Android/caprice/library-ui/src/main/res/values/attrs.xml -->
+    <eat-comment/>
+    <attr format="color|reference" name="gBackgroundColor"/>
+    <attr format="reference" name="gBalloonMarkerStyle"/>
+    <attr format="dimension" name="gBorderSize"/>
+    <attr format="reference" name="gButtonStyle"/>
+    <attr format="reference" name="gCheckBoxStyle"/>
+    <attr format="dimension" name="gCornerRadius"/>
+    <attr format="dimension" name="gCornerRadiusBL"/>
+    <attr format="dimension" name="gCornerRadiusBR"/>
+    <attr format="dimension" name="gCornerRadiusTL"/>
+    <attr format="dimension" name="gCornerRadiusTR"/>
+    <attr format="reference" name="gEditTextStyle"/>
+    <attr format="reference" name="gFloatActionButtonStyle"/>
+    <attr format="string" name="gFont"/>
+    <attr format="reference" name="gImageViewStyle"/>
+    <attr format="reference" name="gLoadingStyle"/>
+    <attr format="reference" name="gSeekBarStyle"/>
+    <attr format="reference" name="gTextViewStyle"/>
+    <attr format="color" name="gTouchColor"/>
+    <attr format="dimension" name="gTouchCornerRadius"/>
+    <attr format="dimension" name="gTouchCornerRadiusBL"/>
+    <attr format="dimension" name="gTouchCornerRadiusBR"/>
+    <attr format="dimension" name="gTouchCornerRadiusTL"/>
+    <attr format="dimension" name="gTouchCornerRadiusTR"/>
+    <attr format="float" name="gTouchDurationRate"/>
+    <attr format="integer" name="gTouchEffect">
+        <enum name="none" value="0"/>
+        <enum name="auto" value="1"/>
+        <enum name="ease" value="2"/>
+        <enum name="press" value="3"/>
+        <enum name="ripple" value="4"/>
+    </attr>
+    <!-- From: file:/Users/qiujuer/Tools/Spaces/GitHub/Genius-Android/caprice/library-ui/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="g_default_loading_bg">@color/grey_300</color>
+    <color name="g_default_seek_bar_indicator">@color/cyan_500</color>
+    <color name="g_default_seek_bar_ripple">@color/cyan_500</color>
+    <declare-styleable name="AbsSeekBar"><attr name="gFont"/><attr format="integer" name="gMin"/><attr format="integer" name="gMax"/><attr format="integer" name="gValue"/><attr format="dimension" name="gTickSize"/><attr format="dimension" name="gThumbSize"/><attr format="dimension" name="gTouchSize"/><attr format="dimension" name="gTrackStroke"/><attr format="dimension" name="gScrubberStroke"/><attr format="boolean" name="gMirrorForRtl"/><attr format="boolean" name="gAllowTrackClickToDrag"/><attr format="color|reference" name="gRippleColor"/><attr format="color|reference" name="gScrubberColor"/><attr format="color|reference" name="gTrackColor"/><attr format="color|reference" name="gThumbColor"/><attr name="gIndicator"><enum name="always" value="-1"/><enum name="none" value="0"/><enum name="auto" value="1"/></attr><attr format="dimension" name="gIndicatorTextPadding"/><attr format="color|reference" name="gIndicatorBackgroundColor"/><attr format="string|reference" name="gIndicatorFormatter"/><attr format="reference" name="gIndicatorTextAppearance"/><attr format="dimension" name="gIndicatorSeparation"/></declare-styleable>
+    <declare-styleable name="BalloonMarker"><attr name="gFont"/><attr format="reference" name="gMarkerTextAppearance"/><attr format="dimension" name="gMarkerTextPadding"/><attr format="color|reference" name="gMarkerBackgroundColor"/><attr format="dimension" name="gMarkerElevation"/><attr format="dimension" name="gMarkerSeparation"/></declare-styleable>
+    <declare-styleable name="Button"><attr name="gFont"/><attr name="gTouchColor"/><attr name="gTouchEffect"/><attr name="gTouchCornerRadius"/><attr name="gTouchCornerRadiusTL"/><attr name="gTouchCornerRadiusTR"/><attr name="gTouchCornerRadiusBL"/><attr name="gTouchCornerRadiusBR"/><attr name="gTouchDurationRate"/></declare-styleable>
+    <declare-styleable name="CheckBox"><attr name="gFont"/><attr name="gBorderSize"/><attr format="dimension" name="gIntervalSize"/><attr format="dimension" name="gMarkSize"/><attr format="color|reference" name="gMarkColor"/></declare-styleable>
+    <declare-styleable name="EditText"><attr name="gFont"/><attr format="dimension" name="gLineSize"/><attr format="reference|color" name="gLineColor"/><attr name="gHintTitle"><enum name="none" value="0"/><enum name="slide" value="1"/></attr><attr format="dimension" name="gHintTitleTextSize"/><attr format="dimension" name="gHintTitlePaddingLeft"/><attr format="dimension" name="gHintTitlePaddingTop"/><attr format="dimension" name="gHintTitlePaddingRight"/><attr format="dimension" name="gHintTitlePaddingBottom"/></declare-styleable>
+    <declare-styleable name="FloatActionButton"><attr name="gBackgroundColor"/><attr name="gTouchColor"/></declare-styleable>
+    <declare-styleable name="ImageView"><attr name="gTouchColor"/><attr name="gTouchEffect"/><attr name="gTouchCornerRadius"/><attr name="gTouchCornerRadiusTL"/><attr name="gTouchCornerRadiusTR"/><attr name="gTouchCornerRadiusBL"/><attr name="gTouchCornerRadiusBR"/><attr name="gTouchDurationRate"/></declare-styleable>
+    <declare-styleable name="Loading"><attr format="dimension" name="gBackgroundLineSize"/><attr format="dimension" name="gForegroundLineSize"/><attr name="gBackgroundColor"/><attr format="reference|color" name="gForegroundColor"/><attr name="gLineStyle"><enum name="circle" value="1"/><enum name="line" value="2"/></attr><attr format="boolean" name="gAutoRun"/><attr format="float" name="gProgressFloat"/></declare-styleable>
+    <declare-styleable name="TextView"><attr name="gFont"/><attr name="gBorder"><flag name="all" value="0x1111"/><flag name="left" value="0x0001"/><flag name="top" value="0x0100"/><flag name="right" value="0x0010"/><flag name="bottom" value="0x1000"/></attr><attr name="gBorderSize"/><attr format="color|reference" name="gBorderColor"/></declare-styleable>
+    <!-- From: file:/Users/qiujuer/Tools/Spaces/GitHub/Genius-Android/caprice/library-ui/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="g_balloonMarker_elevation">4dp</dimen>
+    <dimen name="g_balloonMarker_separation">16dp</dimen>
+    <dimen name="g_balloonMarker_textPadding">2dp</dimen>
+    <dimen name="g_button_background_corners_radius">4dp</dimen>
+    <dimen name="g_button_touch_corners_radius">4dp</dimen>
+    <dimen name="g_checkBox_borderSize">2dp</dimen>
+    <dimen name="g_checkBox_intervalSize">2dp</dimen>
+    <dimen name="g_checkBox_markSize">22dp</dimen>
+    <dimen name="g_editText_hintTitleTextSize">12sp</dimen>
+    <dimen name="g_editText_lineSize">1dp</dimen>
+    <dimen name="g_editText_lineSize_active_increment">0.5dp</dimen>
+    <dimen name="g_editText_paddingH">12dp</dimen>
+    <dimen name="g_editText_paddingV">6dp</dimen>
+    <dimen name="g_imageView_touch_corners_radius">4dp</dimen>
+    <dimen name="g_loading_lineSize">2dp</dimen>
+    <dimen name="g_loading_minSize">28dp</dimen>
+    <dimen name="g_seekBar_scrubberStroke">4dp</dimen>
+    <dimen name="g_seekBar_thumbSize">6dp</dimen>
+    <dimen name="g_seekBar_tickSize">0dp</dimen>
+    <dimen name="g_seekBar_touchSize">12dp</dimen>
+    <dimen name="g_seekBar_trackStroke">2dp</dimen>
+    <!-- From: file:/Users/qiujuer/Tools/Spaces/GitHub/Genius-Android/caprice/library-ui/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="g_font_file">@null</string>
+    <!-- From: file:/Users/qiujuer/Tools/Spaces/GitHub/Genius-Android/caprice/library-ui/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="Genius.Widget.BalloonMarker" parent="android:Widget">
+        <item name="gFont">@string/g_font_file</item>
+        <item name="gMarkerTextAppearance">@style/Genius.Widget.BalloonMarker.TextAppearance
+        </item>
+        <item name="gMarkerTextPadding">@dimen/g_balloonMarker_textPadding</item>
+        <item name="gMarkerBackgroundColor">@color/g_default_seek_bar_indicator</item>
+        <item name="gMarkerElevation">@dimen/g_balloonMarker_elevation</item>
+    </style>
+    <style name="Genius.Widget.BalloonMarker.TextAppearance" parent="android:TextAppearance.Small">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+    <style name="Genius.Widget.Button" parent="android:Widget.Button">
+        <item name="gFont">@string/g_font_file</item>
+        <item name="gTouchColor">@color/black_alpha_48</item>
+        <item name="gTouchEffect">auto</item>
+        <item name="gTouchCornerRadius">@dimen/g_button_touch_corners_radius</item>
+        <item name="android:background">@color/cyan_500</item>
+    </style>
+    <style name="Genius.Widget.CompoundButton.CheckBox" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="gFont">@string/g_font_file</item>
+        <item name="gMarkColor">@color/g_default_check_box</item>
+        <item name="gBorderSize">@dimen/g_checkBox_borderSize</item>
+        <item name="gIntervalSize">@dimen/g_checkBox_intervalSize</item>
+        <item name="gMarkSize">@dimen/g_checkBox_markSize</item>
+    </style>
+    <style name="Genius.Widget.EditText" parent="android:Widget.EditText">
+        <item name="android:paddingTop">@dimen/g_editText_paddingV</item>
+        <item name="android:paddingBottom">@dimen/g_editText_paddingV</item>
+        <item name="android:paddingLeft">@dimen/g_editText_paddingH</item>
+        <item name="android:paddingRight">@dimen/g_editText_paddingH</item>
+        <item name="gFont">@string/g_font_file</item>
+        <item name="android:textColorHint">@color/g_default_edit_view_hint</item>
+        <item name="gLineColor">@color/g_default_edit_view_line</item>
+        <item name="gLineSize">@dimen/g_editText_lineSize</item>
+        <item name="gHintTitle">slide</item>
+        <item name="gHintTitleTextSize">@dimen/g_editText_hintTitleTextSize</item>
+    </style>
+    <style name="Genius.Widget.FloatActionButton" parent="">
+        <item name="gTouchColor">@color/black_alpha_48</item>
+        <item name="gBackgroundColor">@color/g_default_float_action_bg</item>
+    </style>
+    <style name="Genius.Widget.ImageView" parent="">
+        <item name="gTouchColor">@color/black_alpha_48</item>
+        <item name="gTouchEffect">none</item>
+        <item name="gTouchCornerRadius">@dimen/g_imageView_touch_corners_radius</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="Genius.Widget.Loading" parent="">
+        <item name="gBackgroundLineSize">@dimen/g_loading_lineSize</item>
+        <item name="gForegroundLineSize">@dimen/g_loading_lineSize</item>
+
+        <item name="gBackgroundColor">@color/g_default_loading_bg</item>
+        <item name="gForegroundColor">@array/g_default_loading_fg</item>
+
+        <item name="gLineStyle">circle</item>
+        <item name="gAutoRun">true</item>
+    </style>
+    <style name="Genius.Widget.SeekBar" parent="">
+        <item name="gFont">@string/g_font_file</item>
+        <item name="gMirrorForRtl">true</item>
+        <item name="gAllowTrackClickToDrag">true</item>
+
+        <item name="gMin">0</item>
+        <item name="gMax">100</item>
+        <item name="gValue">0</item>
+
+        <item name="gTickSize">@dimen/g_seekBar_tickSize</item>
+        <item name="gThumbSize">@dimen/g_seekBar_thumbSize</item>
+        <item name="gTouchSize">@dimen/g_seekBar_touchSize</item>
+        <item name="gTrackStroke">@dimen/g_seekBar_trackStroke</item>
+        <item name="gScrubberStroke">@dimen/g_seekBar_scrubberStroke</item>
+
+        <item name="gScrubberColor">@color/g_default_seek_bar_scrubber</item>
+        <item name="gTrackColor">@color/g_default_seek_bar_track</item>
+        <item name="gThumbColor">@color/g_default_seek_bar_thumb</item>
+        <item name="gRippleColor">@color/g_default_seek_bar_ripple</item>
+
+        <item name="gIndicator">auto</item>
+        <item name="gIndicatorBackgroundColor">@color/g_default_seek_bar_indicator</item>
+        <item name="gIndicatorTextAppearance">@style/Genius.Widget.BalloonMarker.TextAppearance
+        </item>
+        <item name="gIndicatorTextPadding">@dimen/g_balloonMarker_textPadding</item>
+        <item name="gIndicatorSeparation">@dimen/g_balloonMarker_separation</item>
+    </style>
+    <style name="Genius.Widget.TextView" parent="android:Widget.TextView">
+        <item name="gFont">@string/g_font_file</item>
+    </style>
+</resources>
