@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+apply from: 'https://raw.github.com/qiujuer/BeFoot/master/blog/gradle-jcenter-push/gradle-jcenter-push.gradle'
+// apply from: '../script/gradle-jcenter-push.gradle'
