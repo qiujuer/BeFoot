@@ -49,21 +49,9 @@ afterEvaluate { project ->
         from javadoc.destinationDir
     }
 
-    task apklib(type: Zip) {
-        appendix = extension = 'apklib'
-        from 'AndroidManifest.xml'
-        into('res') {
-            from 'res'
-        }
-        into('src') {
-            from 'src'
-        }
-    }
-
     artifacts {
         archives javadocJar
         archives sourcesJar
-        archives apklib
     }
 }
 
