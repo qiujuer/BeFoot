@@ -1,0 +1,10 @@
+markdown: kramdown
+highlighter: rouge
+relative_permalinks: false
+
+collections:
+  docs:
+    output: true
+
+kramdown:
+    syntax_highlighter: syntax_highlighter_opts
