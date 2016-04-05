@@ -96,7 +96,9 @@ apply from: 'https://raw.github.com/qiujuer/BeFoot/master/blog/gradle-mvn-push/g
 You can now build and push:
 
 ```bash
-$ gradle clean build uploadArchives
+$ gradle install
+
+$ gradle bintrayUpload
 ```
 	
 ### Other Properties
