@@ -87,7 +87,7 @@ public class TimeLineMarker extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec,heightMeasureSpec);
+        //super.onMeasure(widthMeasureSpec,heightMeasureSpec);
 
         int w = getPaddingLeft() + getPaddingRight();
         int h = getPaddingTop() + getPaddingBottom();
