@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PullView">
+        <attr name="pColor" format="color" />
+        <attr name="pRadius" format="dimension"/>
+        <attr name="pDragHeight" format="dimension"/>
+        <attr name="pTangentAngle" format="integer"/>
+        <attr name="pTargetWidth" format="dimension"/>
+        <attr name="pTargetGravityHeight" format="dimension"/>
+    </declare-styleable>
+</resources>
