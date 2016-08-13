@@ -3,7 +3,6 @@ package net.qiujuer.sample.touchpull;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -21,7 +20,7 @@ import android.view.animation.LinearInterpolator;
  * Created by JuQiu
  * on 16/8/11.
  */
-public class PullView extends View {
+public class TouchPullView extends View {
     private final static int MIN_RUN_ANGLE = 90;
     private Path mPath = new Path();
     private Paint mPaint;
@@ -44,23 +43,23 @@ public class PullView extends View {
     private int mTargetGravityHeight = -1;
 
 
-    public PullView(Context context) {
+    public TouchPullView(Context context) {
         super(context);
         init(null, 0, 0);
     }
 
-    public PullView(Context context, AttributeSet attrs) {
+    public TouchPullView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs, 0, 0);
     }
 
-    public PullView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public TouchPullView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(attrs, defStyleAttr, 0);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public PullView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public TouchPullView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(attrs, defStyleAttr, defStyleRes);
     }
@@ -80,17 +79,17 @@ public class PullView extends View {
         final Context context = getContext();
 
         // Load attributes
-        final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.PullView,
+        final TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.TouchPullView,
                 defStyleAttr, defStyleRes);
 
-        int color = array.getColor(R.styleable.PullView_pColor, 0x20000000);
+        int color = array.getColor(R.styleable.TouchPullView_pColor, 0x20000000);
 
-        int radius = array.getDimensionPixelOffset(R.styleable.PullView_pRadius, mCircleRadius);
-        int dragHeight = array.getDimensionPixelOffset(R.styleable.PullView_pDragHeight, mDragHeight);
-        int angle = array.getInteger(R.styleable.PullView_pTangentAngle, mTangentAngle);
+        int radius = array.getDimensionPixelOffset(R.styleable.TouchPullView_pRadius, mCircleRadius);
+        int dragHeight = array.getDimensionPixelOffset(R.styleable.TouchPullView_pDragHeight, mDragHeight);
+        int angle = array.getInteger(R.styleable.TouchPullView_pTangentAngle, mTangentAngle);
 
-        int targetWidth = array.getDimensionPixelOffset(R.styleable.PullView_pTargetWidth, mTargetWidth);
-        int targetGravityHeight = array.getDimensionPixelOffset(R.styleable.PullView_pTargetGravityHeight,
+        int targetWidth = array.getDimensionPixelOffset(R.styleable.TouchPullView_pTargetWidth, mTargetWidth);
+        int targetGravityHeight = array.getDimensionPixelOffset(R.styleable.TouchPullView_pTargetGravityHeight,
                 mTargetGravityHeight);
 
         array.recycle();

@@ -9,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
     private static final float TOUCH_MOVE_MAX_Y = 600;
 
     // The Pull view
-    private PullView mPullView;
+    private TouchPullView mTouchPullView;
 
     // The drag value
     private float mTouchMoveStartY;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mPullView = (PullView) findViewById(R.id.pull);
+        mTouchPullView = (TouchPullView) findViewById(R.id.pull);
         findViewById(R.id.activity_main).setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
                         float y = event.getY();
                         if (mTouchMoveStartY <= y) {
                             float moveSize = y - mTouchMoveStartY;
-                            mPullView.setProgress(moveSize > TOUCH_MOVE_MAX_Y ? 1 : moveSize / TOUCH_MOVE_MAX_Y);
+                            mTouchPullView.setProgress(moveSize > TOUCH_MOVE_MAX_Y ? 1 : moveSize / TOUCH_MOVE_MAX_Y);
                         }
                         return true;
                     default:
-                        mPullView.animToOrigin();
+                        mTouchPullView.animToOrigin();
                         return false;
                 }
             }

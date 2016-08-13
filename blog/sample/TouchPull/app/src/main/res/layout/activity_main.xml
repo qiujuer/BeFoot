@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context="net.qiujuer.sample.touchpull.MainActivity">
 
-    <net.qiujuer.sample.touchpull.PullView
+    <net.qiujuer.sample.touchpull.TouchPullView
         android:id="@+id/pull"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

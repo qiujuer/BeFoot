@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="PullView">
+    <declare-styleable name="TouchPullView">
         <attr name="pColor" format="color" />
         <attr name="pRadius" format="dimension"/>
         <attr name="pDragHeight" format="dimension"/>
