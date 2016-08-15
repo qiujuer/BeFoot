@@ -14,7 +14,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
-import android.view.animation.LinearInterpolator;
 
 /**
  * Created by JuQiu
@@ -28,8 +27,9 @@ public class TouchPullView extends View {
     // The value 0.0f ~ 1.0f
     private float mProgress;
 
+    private Interpolator mRealProgressInterpolator = new DecelerateInterpolator();
     // The drag Interpolator to progress
-    private Interpolator mTangentInterpolator = new LinearInterpolator();
+    private Interpolator mTangentInterpolator = mRealProgressInterpolator;
     // The value mast between 0~45
     private int mTangentAngle = 30;
     // The value mast > mCircleRadius * 2
@@ -234,7 +234,7 @@ public class TouchPullView extends View {
     }
 
     private void updatePath() {
-        final float progress = mProgress;
+        final float progress = mRealProgressInterpolator.getInterpolation(mProgress);
         final float w = getValueByLine(getWidth(), mTargetWidth, mProgress);
         final float h = getValueByLine(0, mDragHeight, mProgress);
 
