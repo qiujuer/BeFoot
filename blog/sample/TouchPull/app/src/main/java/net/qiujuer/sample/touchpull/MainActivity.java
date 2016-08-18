@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 
+import net.qiujuer.widget.touchpull.TouchPullView;
+
 public class MainActivity extends AppCompatActivity {
     private static final float TOUCH_MOVE_MAX_Y = 600;
 

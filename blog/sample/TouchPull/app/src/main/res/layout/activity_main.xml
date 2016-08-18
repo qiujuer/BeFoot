@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="net.qiujuer.sample.touchpull.MainActivity">
 
-    <net.qiujuer.sample.touchpull.TouchPullView
-        android:id="@+id/pull"
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <net.qiujuer.widget.touchpull.TouchPullView
+            android:id="@+id/pull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:pColor="@color/colorAccent"
+            app:pDragHeight="120dp"
+            app:pRadius="25dp"
+            app:pTangentAngle="20"
+            app:pTargetGravityHeight="4dp"
+            app:pTargetWidth="132dp" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/pull"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-45dp"
+            android:background="@drawable/ic_draw_circle"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        app:pColor="@color/colorAccent"
-        app:pDragHeight="120dp"
-        app:pRadius="25dp"
-        app:pTangentAngle="25"
-        app:pTargetGravityHeight="4dp"
-        app:pTargetWidth="132dp" />
-</RelativeLayout>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="PullDown"
+        android:textColor="@color/colorPrimary" />
+</LinearLayout>

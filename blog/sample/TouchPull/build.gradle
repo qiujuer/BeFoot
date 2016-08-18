@@ -6,15 +6,23 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.0-beta1'
-
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
+plugins {
+    id "com.jfrog.bintray" version "1.7"
+    id "com.github.dcendents.android-maven" version "1.5"
+}
+
 allprojects {
+    version = VERSION_NAME
+    group = POM_GROUP_ID
+
     repositories {
         jcenter()
+        mavenCentral()
     }
 }
 

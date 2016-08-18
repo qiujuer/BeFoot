@@ -1,4 +1,4 @@
-package net.qiujuer.sample.touchpull;
+package net.qiujuer.widget.touchpull;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
