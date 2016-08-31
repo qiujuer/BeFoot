@@ -8,5 +8,6 @@
         <attr name="pTargetWidth" format="dimension"/>
         <attr name="pTargetGravityHeight" format="dimension"/>
         <attr name="pContentDrawable" format="reference"/>
+        <attr name="pContentDrawableMargin" format="dimension"/>
     </declare-styleable>
 </resources>

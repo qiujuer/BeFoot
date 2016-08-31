@@ -45,6 +45,7 @@ public class TouchPullView extends View {
     private int mRealTargetGravityHeight = -1;
 
     private Drawable mContentDrawable;
+    private int mContentDrawableMargin;
 
 
     public TouchPullView(Context context) {
@@ -72,7 +73,6 @@ public class TouchPullView extends View {
         // init paint
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setStyle(Paint.Style.FILL);
-        paint.setColor(0x20000000);
         paint.setAntiAlias(true);
         paint.setDither(true);
         mPaint = paint;
@@ -95,7 +95,11 @@ public class TouchPullView extends View {
         int targetWidth = array.getDimensionPixelOffset(R.styleable.TouchPullView_pTargetWidth, mTargetWidth);
         int targetGravityHeight = array.getDimensionPixelOffset(R.styleable.TouchPullView_pTargetGravityHeight,
                 mTargetGravityHeight);
+
         Drawable contentDrawable = array.getDrawable(R.styleable.TouchPullView_pContentDrawable);
+        mContentDrawableMargin = array.getDimensionPixelOffset(R.styleable.TouchPullView_pTargetGravityHeight,
+                mContentDrawableMargin);
+
         array.recycle();
 
         // Set values
@@ -117,6 +121,14 @@ public class TouchPullView extends View {
 
     public void setContentDrawable(Drawable content) {
         this.mContentDrawable = content;
+    }
+
+    public void setContentDrawableMargin(int margin) {
+        this.mContentDrawableMargin = margin;
+    }
+
+    public int getContentDrawableMargin() {
+        return mContentDrawableMargin;
     }
 
     public int getTargetWidth() {
@@ -300,7 +312,12 @@ public class TouchPullView extends View {
     private void updateContentLayout(float cx, float cy, float radius) {
         Drawable drawable = mContentDrawable;
         if (drawable != null) {
-            drawable.setBounds((int) (cx - radius), (int) (cy - radius), (int) (cx + radius), (int) (cy + radius));
+            final int margin = mContentDrawableMargin;
+            int left = (int) (cx - radius) + margin;
+            int top = (int) (cy - radius) + margin;
+            int right = (int) (cx + radius) - margin;
+            int bottom = (int) (cy + radius) - margin;
+            drawable.setBounds(left, top, right, bottom);
         }
 
     }

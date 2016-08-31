@@ -22,16 +22,9 @@
             app:pRadius="25dp"
             app:pTangentAngle="20"
             app:pTargetGravityHeight="4dp"
-            app:pTargetWidth="132dp" />
-
-        <View
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_below="@id/pull"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="-45dp"
-            android:background="@drawable/ic_draw_circle"
-            android:padding="5dp" />
+            app:pTargetWidth="132dp"
+            app:pContentDrawable="@drawable/ic_draw_circle"
+            app:pContentDrawableMargin="5dp"/>
     </RelativeLayout>
 
 
