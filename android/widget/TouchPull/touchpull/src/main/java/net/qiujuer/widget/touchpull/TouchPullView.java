@@ -7,6 +7,7 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.view.animation.PathInterpolatorCompat;
@@ -41,6 +42,9 @@ public class TouchPullView extends View {
 
     private int mTargetWidth = -1;
     private int mTargetGravityHeight = -1;
+    private int mRealTargetGravityHeight = -1;
+
+    private Drawable mContentDrawable;
 
 
     public TouchPullView(Context context) {
@@ -91,7 +95,7 @@ public class TouchPullView extends View {
         int targetWidth = array.getDimensionPixelOffset(R.styleable.TouchPullView_pTargetWidth, mTargetWidth);
         int targetGravityHeight = array.getDimensionPixelOffset(R.styleable.TouchPullView_pTargetGravityHeight,
                 mTargetGravityHeight);
-
+        Drawable contentDrawable = array.getDrawable(R.styleable.TouchPullView_pContentDrawable);
         array.recycle();
 
         // Set values
@@ -103,6 +107,16 @@ public class TouchPullView extends View {
 
         setTargetWidth(targetWidth);
         setTargetGravityHeight(targetGravityHeight);
+
+        setContentDrawable(contentDrawable);
+    }
+
+    public Drawable getContentDrawable() {
+        return mContentDrawable;
+    }
+
+    public void setContentDrawable(Drawable content) {
+        this.mContentDrawable = content;
     }
 
     public int getTargetWidth() {
@@ -213,10 +227,12 @@ public class TouchPullView extends View {
         }
 
         if (mTargetGravityHeight == -1) {
-            mTargetGravityHeight = (int) (mCircleRadius * 0.25f);
+            mRealTargetGravityHeight = (int) (mCircleRadius * 0.25f);
+        } else {
+            mRealTargetGravityHeight = mTargetGravityHeight;
         }
 
-        updatePath();
+        updatePathLayout();
     }
 
     @Override
@@ -230,10 +246,16 @@ public class TouchPullView extends View {
         canvas.drawPath(mPath, mPaint);
         canvas.drawCircle(mCirclePointX, mCirclePointY, mCircleRadius, mPaint);
 
+        Drawable drawable = mContentDrawable;
+        if (drawable != null) {
+            canvas.clipRect(drawable.getBounds());
+            drawable.draw(canvas);
+        }
+
         canvas.restore();
     }
 
-    private void updatePath() {
+    private void updatePathLayout() {
         final float progress = mRealProgressInterpolator.getInterpolation(mProgress);
         final float w = getValueByLine(getWidth(), mTargetWidth, mProgress);
         final float h = getValueByLine(0, mDragHeight, mProgress);
@@ -241,7 +263,7 @@ public class TouchPullView extends View {
         final float cPointX = w / 2.0f;
         final float cRadius = mCircleRadius;
         final float cPointY = h - cRadius;
-        final float endControlY = mTargetGravityHeight;
+        final float endControlY = mRealTargetGravityHeight;
 
         mCirclePointX = cPointX;
         mCirclePointY = cPointY;
@@ -269,7 +291,18 @@ public class TouchPullView extends View {
         path.lineTo(cPointX + cPointX - leftToPointX, leftToPointY);
         path.quadTo(cPointX + cPointX - leftControlPointX, leftControlPointY, w, 0);
 
+        // In this we can update the Content Drawable layout
+        updateContentLayout(cPointX, cPointY, cRadius);
+
         invalidate();
+    }
+
+    private void updateContentLayout(float cx, float cy, float radius) {
+        Drawable drawable = mContentDrawable;
+        if (drawable != null) {
+            drawable.setBounds((int) (cx - radius), (int) (cy - radius), (int) (cx + radius), (int) (cy + radius));
+        }
+
     }
 
     private float getValueByLine(float start, float end, float progress) {
@@ -279,7 +312,7 @@ public class TouchPullView extends View {
 
     private ValueAnimator mValueAnimator;
 
-    public void animToOrigin() {
+    public void release() {
         if (mValueAnimator == null) {
             ValueAnimator animator = ValueAnimator.ofFloat(mProgress, 0f);
             animator.setDuration(400);

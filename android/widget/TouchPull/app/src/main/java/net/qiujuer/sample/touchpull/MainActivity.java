@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         return true;
                     default:
-                        mTouchPullView.animToOrigin();
+                        mTouchPullView.release();
                         return false;
                 }
             }

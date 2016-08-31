@@ -7,5 +7,6 @@
         <attr name="pTangentAngle" format="integer"/>
         <attr name="pTargetWidth" format="dimension"/>
         <attr name="pTargetGravityHeight" format="dimension"/>
+        <attr name="pContentDrawable" format="reference"/>
     </declare-styleable>
 </resources>
