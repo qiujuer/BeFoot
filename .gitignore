@@ -9,3 +9,5 @@ gradlew
 gradlew.bat
 
 *.iml
+
+.DS_Store
