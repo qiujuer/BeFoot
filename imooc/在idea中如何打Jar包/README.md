@@ -1,4 +1,7 @@
+# 在idea中如何打Jar包
+
 今天我们讲讲在idea中如何打Jar包。
+演示代码来自课程：[《Socket网络编程进阶与实战》](https://coding.imooc.com/class/286.html)
 
 ## 目的
 
